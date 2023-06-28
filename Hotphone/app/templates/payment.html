@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+    header{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+
+    .mainColor{
+        color: #EF3331;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+
+    .grayArea{
+        background-color: #D9D9D9;
+        width: 97vw;
+        height: 83vh;
+    }
+
+
+    .customLabel{
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+/*    custom button*/
+    /* CSS */
+.button-24 {
+  background: #EF3331;
+  border: 1px solid #EF3331;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 20px 22px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #EF3331;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+.button-25 {
+  background: transparent;
+  border: 1px solid #EF3331;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #EF3331;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 20px 22px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+
+.button-26 {
+  background: #EF3331;
+  border: 1px solid #EF3331;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 5px 7px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-26:hover,
+.button-26:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #EF3331;
+}
+
+.button-26:active {
+  opacity: .5;
+}
+
+
+
+ .resultText{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+
+
+ .inputTextbox{
+    width: 500px;
+    height: 50px;
+    border: none;
+    font-size: 24px;
+}
+
+ .customLabel{
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+ .inputTextboxMonth{
+    width: 70px;
+    height: 50px;
+    border: none;
+    font-size: 24px;
+}
+
+  .inputTextboxYear{
+    width: 100px;
+    height: 50px;
+    border: none;
+    font-size: 24px;
+}
+
+    .inputTextboxCVC{
+    width: 90px;
+    height: 50px;
+    border: none;
+    font-size: 24px;
+}
+
+    .shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+<header>
+        <div class="d-flex justify-content-between">
+            <div class="mt-2 ml-2">
+               <a href="{{ previous_url }}">
+                    <button class="button-24">Back</button>
+                </a>
+
+            </div>
+            <div>
+                <h4  class="mt-4 mr-4 mainColor">Hi, David</h4>
+            </div>
+        </div>
+</header>
+    <hr style="background-color: #EF3331;">
+<main>
+      <div class="grayArea m-auto">
+          <div class="d-flex flex-row">
+                    <div class="col-6">
+                         <h1 class="m-3">Payment</h1>
+                        <div class="d-flex flex-row mt-5">
+                              <input class="button-24" role="button" style="margin-right: 20px; width: 200px" value="ON DELIVERY"  onclick="location.href='/payment/delivery/{{ phone.id }}'">
+                         <button class="button-25" role="button" disabled>WITH CARD</button>
+                        </div>
+                        <div style="margin-top: 50px">
+                                <label for="card-number" class="customLabel">Card number:</label><br>
+                                <input type="text" id="card-number" name="card-number" class="inputTextbox" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                                <br>
+                                <label for="cardholder-name" class="customLabel">Cardholder name:</label><br>
+                                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="eg. Jon Doe" class="inputTextbox" required>
+                                <br>
+                                <label for="cardMonth" class="customLabel">Card expiration date:</label><br>
+                                 <div class="d-flex flex-row">
+                                    <input type="text" id="cardMonth" name="cardMonth" class="inputTextboxMonth" placeholder="MM" required style="margin-right: 40px">
+                                    <input type="text" id="cardYear" name="cardYear" class="inputTextboxYear" placeholder="YYYY" required>
+                                 </div>
+                                <br>
+                                <label for="CVC" class="customLabel">CVC:</label><br>
+                                <input type="text" id="CVC" name="CVC" class="inputTextboxCVC" placeholder="eg.255" required>
+                        </div>
+                    </div>
+                    <div class="col-6" style="margin-top: 10px; padding: 15px">
+                        <div class="d-flex flex-row shadow">
+                            <div class="col-3 p-3">
+                                <img src="{{MEDIA_URL}}{{phone.image.url}}" style="width: 200px; height: 180px">
+                            </div>
+                            <div class="col-7 ml-2 p-3">
+                                <p class="resultText">Name: {{phone.name}}</p>
+                                <p class="resultText">Manufacturer: {{phone.manufacturer}}</p>
+                                <p class="resultText">Color: {{phone.color}}</p>
+                                <p class="resultText">Storage: {{phone.storage}}</p>
+                            </div>
+                            <div class="col-2 ml-2 p-3">
+                                <p class="resultText" style="color: #0B692B; font-size: 30px" >${{ phone.price|floatformat:0 }}</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 40vh">
+                            <div class="d-flex flex-row">
+                                <p class="mr-4 " style="margin-left: 140px">
+                                    <span class="resultText">Deliver To</span> <br>
+                                    ul.Nikola Todorov br 26 <br>
+                                    1000 Vinica
+                                </p>
+                                <p class="resultText" style="color: #0B692B; font-size: 30px; margin-left: 40px" >${{ phone.price|floatformat:0 }}</p>
+
+                                <input class="button-26 ml-5"  value="BUY 🛒" onclick="location.href='/payed'">
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+      </div>
+</main>
+</body>
+</html>

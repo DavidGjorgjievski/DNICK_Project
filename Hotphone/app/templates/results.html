@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+    header{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .mainColor{
+        color: #EF3331;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+
+    .grayArea{
+        background-color: #D9D9D9;
+        width: 97vw;
+        height: 30vh;
+        margin-top: 10px;
+    }
+
+
+/* CSS */
+.button-24 {
+  background: #EF3331;
+  border: 1px solid #EF3331;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 10px 12px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #EF3331;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+ .search-bar {
+            width: 280px;
+            height: 45px;
+            background-color: transparent;
+            border: 5px solid #EF3331;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .search-bar input[type="text"] {
+            flex: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .searchButton{
+            width: 45px;
+        }
+
+        .image-button {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        /* Toggle Switch Styles */
+    .toggle-switch {
+      display: inline-block;
+      position: relative;
+      width: 60px;
+      height: 34px;
+    }
+
+    .toggle-switch input[type="checkbox"] {
+      display: none;
+    }
+
+    .toggle-switch label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ccc;
+      border-radius: 34px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle-switch label:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-switch input:checked + label {
+      background-color: #EF3331;
+    }
+
+    .toggle-switch input:checked + label:after {
+      transform: translateX(26px);
+    }
+/*do tuka za toggle switch*/
+
+
+    .customLabel{
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+    .phoneImage{
+        height: 210px;
+        display: flex;
+        justify-content: start;
+        margin: 10px;
+        border: 10px solid white;
+    }
+
+    .resultText{
+        text-align: start;
+        font-size: 26px;
+        font-weight: 500;
+    }
+</style>
+
+</head>
+<body>
+<header>
+        <div class="d-flex justify-content-between">
+            <div class="mt-2 ml-2">
+                <a href="/">
+                    <div class="d-flex flex-row">
+                        <img src="../static/app_static/images/logo.png" style="width: 45px">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <h4  class="mt-4 mr-4 mainColor">Hi, David</h4>
+            </div>
+        </div>
+</header>
+    <hr style="background-color: #EF3331;">
+<main>
+     <form action="/results" method="GET">
+                <div class="d-flex justify-content-start flex-row m-2 ml-3">
+                    <div class="search-bar">
+                        <input type="text" name="search_query" placeholder="Search...">
+                    </div>
+                    <div>
+                        <button class="image-button searchButton" type="submit">
+                            <img src="../static/app_static/images/magnifying%20glass.png"  class="searchButton" alt="Search">
+                        </button>
+                    </div>
+                </div>
+                <div class="ml-3 d-flex flex-row">
+                    <div class="toggle-switch">
+                            <input type="checkbox" id="used" name="used"> <!-- Added name attribute -->
+                            <label for="used"></label>
+                    </div>
+                        <p class="customLabel" style="margin-left: 10px;">Used</p>
+                </div>
+
+     </form>
+    <div class="d-flex flex-column align-center text-center">
+        {% for phone in phones %}
+        <div class="grayArea d-flex flex-row m-3">
+            <div class="col-2">
+                <img src="{{MEDIA_URL}}{{phone.image.url}}" class="phoneImage">
+            </div>
+            <div class="col-8">
+                <p class="resultText">Name: {{phone.name}}</p>
+                <p class="resultText">Manufacturer: {{phone.manufacturer}}</p>
+                <p class="resultText">Color: {{phone.color}}</p>
+                <p class="resultText">Storage: {{phone.storage}}</p>
+            </div>
+            <div class="col-2">
+               <p class="resultText" style="color: #0B692B; margin-left: 100px; font-size: 30px" >${{ phone.price|floatformat:0 }}</p>
+                <input class="button-24" style="margin-top: 90px; margin-left: 55px" type="submit" value="DETAILS" onclick="location.href='/details/{{ phone.id }}'">
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</main>
+</body>
+</html>
