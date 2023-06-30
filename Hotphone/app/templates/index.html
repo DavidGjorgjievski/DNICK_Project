@@ -92,6 +92,7 @@
 
 </head>
 <body>
+    {% load static %}
     <header>
         <div class="d-flex justify-content-between">
             <div class="m-2">
@@ -107,7 +108,7 @@
     <main>
         <div class="d-flex justify-content-center flex-column">
             <div class="d-flex flex-row justify-content-center">
-                <img src="../static/app_static/images/logo.png" alt="Hot Phone" style="width: 150px;">
+                        <img src="{% static 'images/logo.png' %}" alt="Hot Phone" style="width: 150px;">
                 <h1 class="mainLogoText">Hot Phone</h1>
             </div>
             <form action="/results" method="GET">
@@ -117,7 +118,7 @@
                     </div>
                     <div>
                         <button class="image-button searchButton" type="submit">
-                            <img src="../static/app_static/images/magnifying%20glass.png"  class="searchButton" alt="Search">
+                             <img src="{% static 'images/search.png' %}"  class="searchButton" alt="Search">
                         </button>
                     </div>
                 </div>

@@ -1,16 +1,17 @@
 from urllib import request
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from app.models import Phone
 
 # Create your views here.
 
+
 def index(request):
     return render(request,"index.html")
 #
 # def sell(request):
 #     return render(request,"sell.html")
+
 
 def sell(request):
     if request.method == 'POST':

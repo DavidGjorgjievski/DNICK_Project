@@ -15,6 +15,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 SECRET_KEY = 'django-insecure-7nefm%j@24uk^ga7#s@rv6$q0qvzg^5p#kqe4z937f57l(ee+e'
 
 DEBUG = True
@@ -101,7 +102,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 
-STATIC_URL = '/static/'
+STATIC_URL = '/app/static/app_static/'
+
+STATICFILES_DIRS = [BASE_DIR / "app/static/app_static"]
+
+
 
 # Media files (Uploaded files)
 

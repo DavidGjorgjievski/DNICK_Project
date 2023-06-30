@@ -188,6 +188,7 @@
 
 </head>
 <body>
+    {% load static %}
 <header>
         <div class="d-flex justify-content-between">
             <div class="mt-2 ml-2">
@@ -217,7 +218,7 @@
                             <div class="col-3 p-3">
                                 <img src="{{MEDIA_URL}}{{phone.image.url}}" style="width: 200px; height: 180px">
                             </div>
-                            <div class="col-7 ml-2 p-3">
+                            <div class="col-7 ml-4 p-3">
                                 <p class="resultText">Name: {{phone.name}}</p>
                                 <p class="resultText">Manufacturer: {{phone.manufacturer}}</p>
                                 <p class="resultText">Color: {{phone.color}}</p>
@@ -228,16 +229,18 @@
                             </div>
                         </div>
 
-                        <div style="margin-top: 40vh">
+                        <div style="margin-top: 35vh">
                             <div class="d-flex flex-row">
-                                <p class="mr-4 " style="margin-left: 140px">
+                                <p class="mr-4">
                                     <span class="resultText">Deliver To</span> <br>
                                     ul.Nikola Todorov br 26 <br>
                                     1000 Vinica
                                 </p>
                                 <p class="resultText" style="color: #0B692B; font-size: 30px; margin-left: 40px" >${{ phone.price|floatformat:0 }}</p>
+                                <div>
+                                    <input class="button-24 ml-5"  value="BUY 🛒" onclick="location.href='/payed'">
+                                </div>
 
-                                <input class="button-26 ml-5"  value="BUY 🛒" onclick="location.href='/payed'">
 
                             </div>
                         </div>
