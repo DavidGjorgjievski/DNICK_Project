@@ -31,7 +31,7 @@ https://github.com/DavidGjorgjievski/DNICK_Project
 
 English
 
-1. Clone the repository itself
+1.Clone the repository itself
 - git clone https://github.com/DavidGjorgjievski/DNICK_Project
 2. Install the necessary requirements
 - pip install Pillow
